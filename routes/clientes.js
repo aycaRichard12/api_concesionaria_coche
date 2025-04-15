@@ -127,7 +127,7 @@ router.put("/:id", async (req, res) => {
             RETURNING *;
         `;
 
-        const values = [nombre, documento_tipo, documento_numero, telefono, correo, direccion, id];
+        const values = [nombre, documento_tipo, documento_numero, telefono, direccion, id];
 
         const result = await db.query(query, values);
 
